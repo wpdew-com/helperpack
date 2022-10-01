@@ -1,0 +1,21 @@
+{
+    "name": "wpdew/helperpack",
+    "description": "My class for ci4 and Laravel",
+    "type": "library",
+    "homepage": "https://github.com/wpdew-com/helperpack",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Wpdew\\HelperPack\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aleks Moroz",
+            "email": "aleksmorro@gmail.com",
+            "homepage": "https://wpdew.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {}
+}
