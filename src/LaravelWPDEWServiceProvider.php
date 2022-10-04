@@ -4,7 +4,7 @@ namespace Wpdew\HelperPack;
 
 use Illuminate\Support\ServiceProvider;
 
-class LaravelWPDEWServiceProvider extends ServiceProvider
+class LaravelWpdewServiceProvider extends ServiceProvider
 {
     /**
      * Boot the service provider.
