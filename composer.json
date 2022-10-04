@@ -19,9 +19,6 @@
     ],
     "require": {},
     "extra": {
-        "branch-alias": {
-            "dev-master": "dev-main"
-        },
         "laravel": {
             "providers": [
                 "Wpdew\\HelperPack\\LaravelWpdewServiceProvider"
