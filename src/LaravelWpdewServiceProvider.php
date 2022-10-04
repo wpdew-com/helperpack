@@ -35,6 +35,6 @@ class LaravelWpdewServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return [Analytics::class, 'wpdew'];
+        //
     }
 }
