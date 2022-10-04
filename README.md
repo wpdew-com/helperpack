@@ -4,7 +4,7 @@ use vendor autoload composer
 
 ## Installation and launch of the project. 
 
-1. add require section
+1. add require section 
 
 ```
 "require": {
@@ -12,6 +12,19 @@ use vendor autoload composer
         "wpdew/helperpack": "dev-main"
     },
 ```
+2. or run composer command
+```
+composer require wpdew/helperpack
+```
+3. configure package version if you need in composer.json
+example
+```
+dev 
+"wpdew/helperpack": "dev-main"
+or stabl
+"wpdew/helperpack": "^1.0"
+```
+
 ## Run install
 
 ```
