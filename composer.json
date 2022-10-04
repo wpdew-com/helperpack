@@ -17,5 +17,18 @@
             "role": "Developer"
         }
     ],
-    "require": {}
+    "require": {},
+    "extra": {
+        "branch-alias": {
+            "dev-master": "dev-main"
+        },
+        "laravel": {
+            "providers": [
+                "Wpdew\\HelperPack\\LaravelWpdewServiceProvider"
+            ],
+            "aliases": {
+                "WpdewHelp": "Wpdew\\HelperPack\\LaravelWpdewServiceProvider"
+            }
+        }
+    }
 }
