@@ -32,7 +32,7 @@ composer update
 ```
 
 ## Add to laravel 
-Register to app.php
+Register to app.php manual
 ```
 Wpdew\HelperPack\LaravelWpdewServiceProvider::class,
 ```
