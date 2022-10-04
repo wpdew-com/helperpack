@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Providers;
- 
+namespace Wpdew\HelperPack;
+
+use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
- 
-class ExampleServiceProvider extends ServiceProvider
+
+class LaravelWpdewServiceProvider extends ServiceProvider
 {
     /**
      * Boot the service provider.
@@ -35,6 +36,6 @@ class ExampleServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        //
+        return [Analytics::class, 'wpdew'];
     }
 }
