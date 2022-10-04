@@ -4,18 +4,7 @@ use vendor autoload composer
 
 ## Installation and launch of the project. 
 
-1. add repository to composer.json
-
-```
-"repositories": {
-        "wpdew-com/ci4pack": {
-            "type": "vcs",
-            "url": "https://github.com/wpdew-com/helperpack.git"
-        }
-    },
-```
-
-2. add require section
+1. add require section
 
 ```
 "require": {
@@ -27,6 +16,16 @@ use vendor autoload composer
 
 ```
 composer update
+```
+
+## Add to laravel 
+Register to app.php
+```
+Wpdew\HelperPack\LaravelWpdewServiceProvider::class,
+```
+Run vendor publish
+```
+php artisan vendor:publish --provider="Wpdew\HelperPack\LaravelWpdewServiceProvider" --tag="config"
 ```
 
 ## How to use
