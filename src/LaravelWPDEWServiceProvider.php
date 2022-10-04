@@ -13,12 +13,10 @@ class LaravelWPDEWServiceProvider extends ServiceProvider
     public function boot()
     {
         $source = __DIR__.'/config/wpdew.php';
+        $this->publishes([$source => config_path('wpdew.php')]);
+        
 
-        if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
-            $this->publishes([$source => config_path('wpdew.php')]);
-        }
-
-        $this->mergeConfigFrom($source, 'wpdew');
+        //$this->mergeConfigFrom($source, 'wpdew');
     }
 
     /**
