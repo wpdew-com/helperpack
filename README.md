@@ -65,7 +65,7 @@ $laraname = $laravel->getName("Aleks");
 2. set key path and ga_id in config wpdew
 3. use WpdewGamp
 
-:example request
+example request
 ```
 $gamp = new WpdewGamp(); 
 $analytics = $gamp->initializeAnalytics();
