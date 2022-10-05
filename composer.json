@@ -19,7 +19,7 @@
     ],
     "require": {
         "php": "^7.2 || ^8.0",
-        "theiconic/php-ga-measurement-protocol": "^2.0"
+        "googleapis/google-api-php-client": "^2.0"
     },
     "extra": {
         "laravel": {
