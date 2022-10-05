@@ -58,4 +58,27 @@ $name = $helperpack->getName("Aleks");
 $laravel = new HelperPack\HelperLaravel();
 $laraname = $laravel->getName("Aleks");
 ```
+
+## How get GAMP only Laravel
+
+1. publish --provider
+2. set key path and ga_id in config wpdew
+3. use WpdewGamp
+4. example request
+```
+$gamp = new WpdewGamp();  //'VIEW_ID' => "ga:277219841"
+$analytics = $gamp->initializeAnalytics();
+
+    $data_user = [
+        "setStartDate" => "7daysAgo", 
+        "setEndDate" => "today", 
+        "setExpression" => "ga:users", 
+        "setAlias" => "setAlias",
+    ];
+    $response_user = $gamp->getReport($analytics , $data_user);
+    $resuse_week = $gamp->printResults($response_user);
+```
+
+
+
 enjoy
