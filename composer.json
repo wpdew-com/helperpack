@@ -19,7 +19,7 @@
     ],
     "require": {
         "php": "^7.2 || ^8.0",
-        "googleapis/google-api-php-client": "^2.0"
+        "google/apiclient": "^2.12.1"
     },
     "extra": {
         "laravel": {
