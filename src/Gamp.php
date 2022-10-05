@@ -32,21 +32,33 @@ class Gamp
       return $analytics;
     }
 
-    function getReport($analytics) {
+    /**
+     * data array
+     * 
+     * setStartDate
+     * setEndDate
+     * setExpression
+     * setAlias
+     *
+     * @return $analytics->reports->batchGet( $body );
+     */
+  
+
+    function getReport($analytics , $data) {
 
         // здесь нужно указать значение своего VIEW_ID
-        $VIEW_ID = "ga:277219841"; //335572940  makesite.com.ua
+        $VIEW_ID = config("wpdew.VIEW_ID");//"ga:277219841"; //335572940  makesite.com.ua
         // создадим объект DateRange (диапазон дат)
         $dateRange = new Google_Service_AnalyticsReporting_DateRange();
         // установка начальной даты
-        $dateRange->setStartDate("7daysAgo"); //  30daysAgo 7daysAgo  https://developers.google.com/analytics/devguides/reporting/core/v3/reference#startDate
+        $dateRange->setStartDate($data['setStartDate']); //  30daysAgo 7daysAgo  https://developers.google.com/analytics/devguides/reporting/core/v3/reference#startDate
         // установка конечной даты
-        $dateRange->setEndDate("today");
+        $dateRange->setEndDate($data['setEndDate']);//today
 
         // создадим объект Metrics (показатели данных)
         $users = new Google_Service_AnalyticsReporting_Metric();
-        $users->setExpression("ga:users");
-        $users->setAlias("users");
+        $users->setExpression($data['setExpression']); // ga:users
+        $users->setAlias($data['setAlias']); //users
 
         // Create the ReportRequest object.
         $request = new Google_Service_AnalyticsReporting_ReportRequest();

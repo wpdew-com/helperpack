@@ -5,7 +5,7 @@ return [
     'wpdew_ver' => '1.0.0',
 
     'KEY_FILE_LOCATION' => public_path() . '/google/analytics.json',
-
+    'VIEW_ID' => "ga:277219841", //335572940  makesite.com.ua
     /*
     |--------------------------------------------------------------------------
     | Google Analytics Tracking / Web Property ID [REQUIRED]
