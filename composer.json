@@ -7,7 +7,10 @@
     "autoload": {
         "psr-4": {
             "Wpdew\\HelperPack\\": "src/"
-        }
+        },
+        "classmap": [
+            "src/aliases.php"
+        ]
     },
     "authors": [
         {
@@ -27,7 +30,7 @@
                 "Wpdew\\HelperPack\\LaravelWpdewServiceProvider"
             ],
             "aliases": {
-                "WpdewHelp": "Wpdew\\HelperPack\\LaravelWpdewServiceProvider"
+                "WpdewHelp": "Wpdew\\HelperPack"
             }
         }
     }
