@@ -66,7 +66,7 @@ $laraname = $laravel->getName("Aleks");
 3. use WpdewGamp
 4. example request
 ```
-$gamp = new WpdewGamp();  //'VIEW_ID' => "ga:277219841"
+$gamp = new WpdewGamp(); 
 $analytics = $gamp->initializeAnalytics();
 
     $data_user = [
