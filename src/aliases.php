@@ -1,7 +1,7 @@
 <?php
 
 $classMap = [
-    'Wpdew\\HelperPack' => 'WpdewHelp'
+    'Wpdew\\HelperPack\\HelperPack' => 'WpdewHelp'
 ];
 
 foreach ($classMap as $class => $alias) {
