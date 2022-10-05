@@ -19,7 +19,7 @@ class Gamp
     {
 
       // здесь нужно указать имя JSON-файла, содержащего сгенерированный ключ
-      $KEY_FILE_LOCATION = public_path() . '/google/analytics.json';
+      $KEY_FILE_LOCATION = config("wpdew.KEY_FILE_LOCATION");//public_path() . '/google/analytics.json';
 
       // Создание и конфигурирование нового клиентского объекта.
       $client = new Google_Client();
@@ -89,7 +89,7 @@ class Gamp
         return $content;
       }
 
-      
+
 
 
     public function getName($name)

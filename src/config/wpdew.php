@@ -4,6 +4,8 @@ return [
 
     'wpdew_ver' => '1.0.0',
 
+    'KEY_FILE_LOCATION' => public_path() . '/google/analytics.json',
+
     /*
     |--------------------------------------------------------------------------
     | Google Analytics Tracking / Web Property ID [REQUIRED]
