@@ -7,9 +7,9 @@ return [
     'KEY_FILE_LOCATION' => public_path() . '/google/analytics.json',
 
 
-    'VIEW_ID' => "ga:277219841", //335572940  makesite.com.ua
+    'VIEW_ID' => "", 
 
-    
+
     /*
     |--------------------------------------------------------------------------
     | Google Analytics Tracking / Web Property ID [REQUIRED]
