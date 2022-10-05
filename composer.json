@@ -30,7 +30,7 @@
                 "Wpdew\\HelperPack\\LaravelWpdewServiceProvider"
             ],
             "aliases": {
-                "WpdewHelp": "Wpdew\\HelperPack"
+                "WpdewHelp": "Wpdew\\HelperPack\\HelperPack"
             }
         }
     }
