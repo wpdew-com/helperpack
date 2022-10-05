@@ -1,7 +1,7 @@
 <?php
 
 $classMap = [
-    'Wpdew\\HelperPack\\HelperPack' => 'WpdewHelps'
+    'Wpdew\\HelperPack\\HelperPack' => 'WpdewHelp'
 ];
 
 foreach ($classMap as $class => $alias) {
@@ -15,7 +15,7 @@ foreach ($classMap as $class => $alias) {
 
 
 if (\false) {
-    class WpdewHelps extends \Wpdew\HelperPack\HelperPack
+    class WpdewHelp extends \Wpdew\HelperPack\HelperPack
     {
     }
 }
