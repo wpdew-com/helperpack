@@ -6,10 +6,6 @@ return [
 
     'KEY_FILE_LOCATION' => public_path() . '/google/analytics.json',
 
-
-    'VIEW_ID' => "", 
-
-
     /*
     |--------------------------------------------------------------------------
     | Google Analytics Tracking / Web Property ID [REQUIRED]
@@ -22,7 +18,7 @@ return [
     | https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#tid
     |
     */
-    'tracking_id' => env('GA_ID'),
+    'VIEW_ID' => "", 
 
     /*
     |--------------------------------------------------------------------------
