@@ -80,6 +80,7 @@ $analytics = $gamp->initializeAnalytics();
     $resuse_week = $gamp->printResults($response_user);
 ```
 
+## How get GA4 only Laravel
 
 
 enjoy
