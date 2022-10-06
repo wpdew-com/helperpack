@@ -90,12 +90,12 @@ example request
 ```
 $analitycs = new WpdewGa4;
 
-     $getdata_day_week = [
+     $getdata_user_week = [
         'start_date' => '7daysAgo', // 'YYYY-MM-DD', today, yesterday, 7daysAgo, 14daysAgo, 30daysAgo, 90daysAgo, 365daysAgo, 1095daysAgo
         'end_date' => 'today', // 'YYYY-MM-DD', today, yesterday, 7daysAgo, 14daysAgo, 30daysAgo, 90daysAgo, 365daysAgo, 1095daysAgo
         'metric' => 'activeUsers' // activeUsers, newUsers, sessions, totalUsers, screenPageViews
      ];
-     $users_day_week = $analitycs->getMetriks($getdata_day_week);
+     $users_day_week = $analitycs->getMetriks($getdata_user_week);
 ```
 
 enjoy
