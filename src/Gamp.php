@@ -51,7 +51,7 @@ class Gamp
         // создадим объект DateRange (диапазон дат)
         $dateRange = new Google_Service_AnalyticsReporting_DateRange();
         // установка начальной даты
-        $dateRange->setStartDate($data['setStartDate']); // 7daysAgo, 30daysAgo, 90daysAgo, 365daysAgo, today, yesterday, 7daysAgo, 14daysAgo, 30daysAgo, 90daysAgo, 365daysAgo, 1095daysAgo
+        $dateRange->setStartDate($data['setStartDate']); // today, yesterday, 7daysAgo, 14daysAgo, 30daysAgo, 90daysAgo, 365daysAgo, 1095daysAgo
         // установка конечной даты
         $dateRange->setEndDate($data['setEndDate']);// today, yesterday, 7daysAgo, 14daysAgo, 30daysAgo, 90daysAgo, 365daysAgo, 1095daysAgo
 

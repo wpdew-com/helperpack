@@ -10,7 +10,8 @@ use Google\Analytics\Data\V1beta\Metric;
 class Ga4
 {
 
-    function getReport($getdata) {
+    //https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#metrics
+    function getMetriks($getdata) {
 
         $property_id = config("wpdew.MEASUREMENT_ID");
         $path = config("wpdew.GOOGLE_APPLICATION_CREDENTIALS"); 
@@ -22,13 +23,13 @@ class Ga4
             'property' => 'properties/' . $property_id,
             'dateRanges' => [
                 new DateRange([
-                    'start_date' => $getdata['start_date'], // '2020-01-01' 
-                    'end_date' => $getdata['end_date'], // 'today'
+                    'start_date' => $getdata['start_date'], // 'YYYY-MM-DD', today, yesterday, 7daysAgo, 14daysAgo, 30daysAgo, 90daysAgo, 365daysAgo, 1095daysAgo
+                    'end_date' => $getdata['end_date'], // 'YYYY-MM-DD', today, yesterday, 7daysAgo, 14daysAgo, 30daysAgo, 90daysAgo, 365daysAgo, 1095daysAgo
                 ]),
             ],
             'metrics' => [new Metric(
                 [
-                    'name' => $getdata['metric'], // 'activeUsers' 
+                    'name' => $getdata['metric'], // activeUsers, newUsers, sessions, totalUsers, screenPageViews
                 ]
             )
             ]
