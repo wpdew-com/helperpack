@@ -8,7 +8,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Google Analytics Tracking / Web Property ID [REQUIRED]
+    | Google Analytics Tracking / Web Property ID [REQUIRED] example ga:277219841
     |--------------------------------------------------------------------------
     |
     | Your Google Analytics tracking ID / web property ID. The format is UA-XXXX-Y.
@@ -19,6 +19,17 @@ return [
     |
     */
     'VIEW_ID' => "", 
+
+    /*
+    |--------------------------------------------------------------------------
+    | GA4 property_id ID [REQUIRED]  example 335572940
+    |--------------------------------------------------------------------------
+    |
+    */
+
+
+    'MEASUREMENT_ID' => "",
+    'GOOGLE_APPLICATION_CREDENTIALS' => public_path() . '/google/analytics.json',
 
     /*
     |--------------------------------------------------------------------------

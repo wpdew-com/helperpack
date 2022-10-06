@@ -3,6 +3,7 @@
 $classMap = [
     'Wpdew\\HelperPack\\HelperPack' => 'WpdewHelp',
     'Wpdew\\HelperPack\\Gamp' => 'WpdewGamp',
+    'Wpdew\\HelperPack\\Ga4' => 'WpdewGa4',
 ];
 
 foreach ($classMap as $class => $alias) {
@@ -20,6 +21,9 @@ if (\false) {
     {
     }
     class WpdewGamp extends \Wpdew\HelperPack\Gamp
+    {
+    }
+    class WpdewGa4 extends \Wpdew\HelperPack\Ga4
     {
     }
 }
