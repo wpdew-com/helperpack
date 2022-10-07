@@ -98,4 +98,21 @@ $analitycs = new WpdewGa4;
      $users_day_week = $analitycs->getMetriks($getdata_user_week);
 ```
 
+## How get GA4 php 
+1. Set env MEASUREMENT_ID
+2. Set env GOOGLE_APPLICATION_CREDENTIALS path
+3. Get data
+
+example request
+```
+$analitycs = new WpdewGa4;
+    $getdata_user_week = [
+        'start_date' => '7daysAgo', //7daysAgo, 30daysAgo,
+        'end_date' => 'today',
+        'metric' => 'activeUsers' //screenPageViews
+    ];
+$users_week = $analitycs->phpgetMetriks($getdata_user_week);
+```
+
+
 enjoy
