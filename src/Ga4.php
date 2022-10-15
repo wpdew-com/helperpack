@@ -199,4 +199,124 @@ class Ga4
 
 
 
+    function FullParamMetriksLaravel($getdata) {
+        $property_id = config("wpdew.MEASUREMENT_ID");
+        $path = config("wpdew.GOOGLE_APPLICATION_CREDENTIALS");
+        putenv("GOOGLE_APPLICATION_CREDENTIALS=$path");
+        $client = new BetaAnalyticsDataClient();
+
+
+        $response = $client->runReport([
+            'property' => 'properties/' . $property_id,
+            'dateRanges' => [
+                new DateRange([
+                    'start_date' => $getdata['start_date'], 
+                    'end_date' => $getdata['end_date'], 
+                ]),
+            ],
+            'metrics' => [new Metric(
+                [
+                    'name' => 'activeUsers',
+                ]
+                ),new Metric(
+                [
+                    'name' => 'screenPageViews',
+                ]
+            )
+            ],
+            'dimensions' => [
+                new Dimension(
+                    [
+                        'name' => 'date',
+                    ]),
+            ],
+            'limit' => 100,
+        ]);
+        
+        foreach ($response->getRows() as $row) {
+            $data[] = array(
+                'date' => $row->getDimensionValues()[0]->getValue(),
+                'activeUsers' => $row->getMetricValues()[0]->getValue(),
+                'screenPageViews' => $row->getMetricValues()[1]->getValue(),
+            );
+        }
+
+        return $data;
+
+    }
+
+
+
+    function DeviceParamMetriksLaravel($getdata) {
+        $property_id = config("wpdew.MEASUREMENT_ID");
+        $path = config("wpdew.GOOGLE_APPLICATION_CREDENTIALS");
+        putenv("GOOGLE_APPLICATION_CREDENTIALS=$path");
+        $client = new BetaAnalyticsDataClient();
+
+
+        $response = $client->runReport([
+            'property' => 'properties/' . $property_id,
+            'dateRanges' => [
+                new DateRange([
+                    'start_date' => $getdata['start_date'], 
+                    'end_date' => $getdata['end_date'], 
+                ]),
+            ],
+            'metrics' => [new Metric(
+                [
+                    'name' => 'activeUsers', 
+                ]
+                ),new Metric(
+                [
+                    'name' => 'screenPageViews',
+                ]
+            )
+            ],
+            'dimensions' => [
+                new Dimension(
+                    [
+                        'name' => 'browser', 
+                    ]),
+                new Dimension(
+                    [
+                        'name' => 'date',
+                    ]),
+                new Dimension(
+                    [
+                        'name' => 'deviceCategory',
+                    ])
+            ],
+            'limit' => 100,
+        ]);
+        
+        $data_response = array();
+        foreach ($response->getRows() as $row) {
+            $data_response[] = $row->getDimensionValues()[2]->getValue();
+        }
+
+        $array_device = array_count_values($data_response);
+        if($array_device['mobile'] == ''){
+            $mobile = '0';}else{$mobile = $array_device['mobile'];
+        }
+        if($array_device['desktop'] == ''){
+            $desktop = '0';}else{$desktop = $array_device['desktop'];
+        }
+        if($array_device['tablet'] == ''){
+            $tablet = '0';}else{$tablet = $array_device['tablet'];
+        }
+
+        $data[] = array(
+            'mobile' => $mobile,
+            'desktop' => $desktop,
+            'tablet' => $tablet,
+        );
+
+        return $data;
+
+    }
+
+
+
+
+
 }
