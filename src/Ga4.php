@@ -175,15 +175,9 @@ class Ga4
         }
 
         $array_device = array_count_values($data_response);
-        if($array_device['mobile'] == ''){
-            $mobile = '0';}else{$mobile = $array_device['mobile'];
-        }
-        if($array_device['desktop'] == ''){
-            $desktop = '0';}else{$desktop = $array_device['desktop'];
-        }
-        if($array_device['tablet'] == ''){
-            $tablet = '0';}else{$tablet = $array_device['tablet'];
-        }
+        $mobile = isset($array_device['mobile']) ? $array_device['mobile'] : 0;
+        $desktop = isset($array_device['desktop']) ? $array_device['desktop'] : 0;
+        $tablet = isset($array_device['tablet']) ? $array_device['tablet'] : 0;
 
         $data[] = array(
             'mobile' => $mobile,
@@ -295,15 +289,9 @@ class Ga4
         }
 
         $array_device = array_count_values($data_response);
-        if($array_device['mobile'] == ''){
-            $mobile = '0';}else{$mobile = $array_device['mobile'];
-        }
-        if($array_device['desktop'] == ''){
-            $desktop = '0';}else{$desktop = $array_device['desktop'];
-        }
-        if($array_device['tablet'] == ''){
-            $tablet = '0';}else{$tablet = $array_device['tablet'];
-        }
+        $mobile = isset($array_device['mobile']) ? $array_device['mobile'] : 0;
+        $desktop = isset($array_device['desktop']) ? $array_device['desktop'] : 0;
+        $tablet = isset($array_device['tablet']) ? $array_device['tablet'] : 0;
 
         $data[] = array(
             'mobile' => $mobile,
