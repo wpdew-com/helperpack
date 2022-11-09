@@ -21,7 +21,7 @@
         }
     ],
     "require": {
-        "php": "^7.2",
+        "php": "^7.2||^8.0",
         "google/apiclient": "^2.12.1",
         "google/analytics-data": "^0.8.6"
     },
