@@ -113,24 +113,8 @@ $analitycs = new WpdewGa4;
     ];
 $users_week = $analitycs->phpgetMetriks($getdata_user_week);
 ```
-<details> <summary>Option 1). Use HTTPS with a custom domain</summary>
+<details><summary>Toggle me!</summary>Peek a boo!</details>
 
-1. Create a SSL cert:
-
-```shell
-cd cli
-./create-cert.sh
-```
-<details>
-
-<details> <summary>Option 2). Use HTTP with a custom domain</summary>
-
-1. Create a SSL cert:
-
-```shell
-cd cli
-./create-cert.sh
-```
-<details>
+<details><summary>Toggle me 2!</summary>Peek a boo!</details>
 
 enjoy
