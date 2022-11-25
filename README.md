@@ -114,9 +114,15 @@ $analitycs = new WpdewGa4;
 $users_week = $analitycs->phpgetMetriks($getdata_user_week);
 ```
 <details><summary>Toggle me!</summary>
-Peek a boo!
+example request
 ```
-code
+$analitycs = new WpdewGa4;
+    $getdata_user_week = [
+        'start_date' => '7daysAgo', //7daysAgo, 30daysAgo,
+        'end_date' => 'today',
+        'metric' => 'activeUsers' //screenPageViews
+    ];
+$users_week = $analitycs->phpgetMetriks($getdata_user_week);
 ```
 </details>
 
