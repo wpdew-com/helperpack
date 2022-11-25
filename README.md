@@ -114,6 +114,7 @@ $analitycs = new WpdewGa4;
 $users_week = $analitycs->phpgetMetriks($getdata_user_week);
 ```
 <details><summary>Toggle me!</summary>
+
 example request
 ```
 $analitycs = new WpdewGa4;
@@ -124,6 +125,7 @@ $analitycs = new WpdewGa4;
     ];
 $users_week = $analitycs->phpgetMetriks($getdata_user_week);
 ```
+
 </details>
 
 <details><summary>Toggle me 2!</summary>
