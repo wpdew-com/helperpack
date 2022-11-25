@@ -113,8 +113,18 @@ $analitycs = new WpdewGa4;
     ];
 $users_week = $analitycs->phpgetMetriks($getdata_user_week);
 ```
-<details><summary>Toggle me!</summary>Peek a boo!</details>
+<details><summary>Toggle me!</summary>
+Peek a boo!
+```
+code
+```
+</details>
 
-<details><summary>Toggle me 2!</summary>Peek a boo!</details>
+<details><summary>Toggle me 2!</summary>
+Peek a boo!
+```
+code
+```
+</details>
 
 enjoy
